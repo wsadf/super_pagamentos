@@ -50,19 +50,45 @@
 export default {
   name: 'MobilePeriodStats',
   mounted() {
-    this.drawChart()
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.drawChart()
+      }, 100)
+    })
+    
+    // Redesenhar quando a janela for redimensionada
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.handleResize)
   },
   methods: {
+    handleResize() {
+      this.$nextTick(() => {
+        this.drawChart()
+      })
+    },
     drawChart() {
       const canvas = this.$refs.chartCanvas
       if (!canvas) return
       
       const ctx = canvas.getContext('2d')
-      const width = canvas.offsetWidth
+      const container = canvas.parentElement
+      if (!container) return
+      
+      const width = container.offsetWidth || canvas.offsetWidth || 300
       const height = 120
       
-      canvas.width = width
-      canvas.height = height
+      // Configurar dimensões do canvas
+      const dpr = window.devicePixelRatio || 1
+      canvas.width = width * dpr
+      canvas.height = height * dpr
+      canvas.style.width = width + 'px'
+      canvas.style.height = height + 'px'
+      ctx.scale(dpr, dpr)
+      
+      // Limpar canvas
+      ctx.clearRect(0, 0, width, height)
       
       const padding = 20
       const chartWidth = width - padding * 2
@@ -71,7 +97,7 @@ export default {
       const maxValue = 200000
       
       // Grid
-      ctx.strokeStyle = '#e5e7eb' // Canvas requer hex
+      ctx.strokeStyle = '#e5e7eb'
       ctx.lineWidth = 1
       
       // Linhas horizontais
@@ -101,7 +127,13 @@ export default {
         const barHeight = (value / maxValue) * chartHeight
         const y = height - padding - barHeight
         
-        ctx.fillStyle = value > 100000 ? '#10b981' : '#0641FC'
+        // Aplicar cores corretamente
+        if (value > 100000) {
+          ctx.fillStyle = '#10b981' // Verde para valores altos
+        } else {
+          ctx.fillStyle = '#0641FC' // Azul para valores normais
+        }
+        
         ctx.fillRect(x + 2, y, barWidth - 4, barHeight)
       })
     },
