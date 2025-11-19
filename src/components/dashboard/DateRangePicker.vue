@@ -107,7 +107,7 @@ export default {
   gap: $spacing-sm;
   padding: $spacing-md $spacing-lg;
   padding-left: 40px;
-  background-color: #fff;
+  background-color: $color-background;
   border: 1px solid $color-border;
   border-radius: 250px;
   min-width: 280px;
@@ -115,11 +115,11 @@ export default {
   
   &:hover,
   &:focus-within {
-    background-color: #0641FC;
-    border-color: #0641FC;
+    background-color: $color-primary;
+    border-color: $color-primary;
     
     .date-range-input {
-      color: #fff;
+      color: $color-text-light;
       
       &::placeholder {
         color: rgba(255, 255, 255, 0.7);
@@ -127,7 +127,7 @@ export default {
     }
     
     .date-separator {
-      color: #fff;
+      color: $color-text-light;
     }
     
     .date-range-icon {

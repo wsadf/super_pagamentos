@@ -135,7 +135,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #EEEEEE;
+  border-top: 1px solid $color-border-lightest;
   padding-top: $spacing-sm;
   margin-top: $spacing-sm;
   margin-left: -$spacing-xl;

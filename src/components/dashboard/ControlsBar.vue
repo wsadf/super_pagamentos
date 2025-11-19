@@ -71,8 +71,8 @@ export default {
   justify-content: space-between;
   gap: $spacing-sm;
   padding: $spacing-md $spacing-lg;
-  background-color: #0641FC;
-  color: #fff;
+  background-color: $color-primary;
+  color: $color-text-light;
   border: none;
   border-radius: 250px;
   font-weight: $font-weight-medium;
@@ -90,7 +90,7 @@ export default {
 .btn-icon-wrapper {
   width: 15px;
   height: 15px;
-  background-color: #fff;
+  background-color: $color-background;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -102,7 +102,7 @@ export default {
   font-size: $font-size-base;
   font-weight: $font-weight-bold;
   line-height: 1;
-  color: #0641FC;
+  color: $color-primary;
 }
 
 .controls-filters {
@@ -132,7 +132,7 @@ export default {
   align-items: center;
   gap: $spacing-sm;
   padding: $spacing-md $spacing-lg;
-  background-color: #fff;
+  background-color: $color-background;
   color: $color-text-primary;
   border: 1px solid $color-border;
   border-radius: 250px;
@@ -144,9 +144,9 @@ export default {
   &:hover,
   &:active,
   &.active {
-    background-color: #0641FC;
-    color: #fff;
-    border-color: #0641FC;
+    background-color: $color-primary;
+    color: $color-text-light;
+    border-color: $color-primary;
   }
   
   .filter-icon {
@@ -186,7 +186,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: $color-background;
   border: 1px solid $color-border;
   border-radius: 250px;
   cursor: pointer;

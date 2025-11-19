@@ -99,8 +99,8 @@ export default {
 .sidebar {
   width: 315px;
   max-width: 315px;
-  background-color: #FFF;
-  color: #2A2E33;
+  background-color: $color-background;
+  color: $color-text-gray;
   position: fixed;
   left: 0;
   top: 77px;
@@ -137,7 +137,7 @@ export default {
 .section-label {
   font-size: $font-size-xs;
   text-transform: uppercase;
-  color: #2A2E33;
+  color: $color-text-gray;
   opacity: 0.6;
   margin-bottom: $spacing-md;
   letter-spacing: 0.5px;
@@ -156,14 +156,14 @@ export default {
   height: 39px;
   padding: 0 $spacing-md;
   border-radius: $border-radius-md;
-  color: #2A2E33;
+  color: $color-text-gray;
   text-decoration: none;
   transition: all $transition-fast;
   font-size: $font-size-sm;
   
   
   &.active {
-    color: #2A2E33;
+    color: $color-text-gray;
     font-weight: $font-weight-medium;
   }
 }
@@ -171,7 +171,7 @@ export default {
 .menu-icon-wrapper {
   width: 41px;
   height: 39px;
-  background-color: #f5f5f5;
+  background-color: $color-background-gray;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -181,7 +181,7 @@ export default {
   
   .menu-item:hover &,
   .menu-item.active & {
-    background-color: #D1DCFF;
+    background-color: $color-primary-lighter;
   }
 }
 
@@ -241,7 +241,7 @@ export default {
   min-height: 46px;
   height: 46px;
   max-height: 46px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid $color-border-gray;
   border-radius: $border-radius-md;
   margin-top: auto;
   flex-shrink: 0;
@@ -255,7 +255,7 @@ export default {
   width: 100%;
   height: 100%;
   min-height: 46px;
-  color: #2A2E33;
+  color: $color-text-gray;
   opacity: 0.7;
   text-decoration: none;
   font-size: 14px;
@@ -265,7 +265,7 @@ export default {
   
   &:hover {
     opacity: 1;
-    color: #2A2E33;
+    color: $color-text-gray;
   }
 }
 

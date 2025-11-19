@@ -60,7 +60,7 @@ export default {
 
 <style lang="scss" scoped>
 .mobile-header {
-  background: #0641FC;
+  background: $color-primary;
   padding: 0;
   position: fixed;
   top: 0;
@@ -79,7 +79,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: $spacing-xs $spacing-md;
-  color: #fff;
+  color: $color-text-light;
   font-size: 14px;
   font-weight: $font-weight-medium;
 }
@@ -98,14 +98,14 @@ export default {
   width: 16px;
   height: 16px;
   opacity: 0.9;
-  color: #fff;
+  color: $color-text-light;
 }
 
 .account-selector {
   display: flex;
   align-items: center;
   gap: $spacing-sm;
-  background-color: #fff;
+  background-color: $color-background;
   border-radius: 250px;
   padding: $spacing-xs $spacing-md;
   margin: $spacing-sm $spacing-md;
@@ -117,7 +117,7 @@ export default {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #0641FC;
+  background-color: $color-primary;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,7 +125,7 @@ export default {
 }
 
 .account-logo-text {
-  color: #fff;
+  color: $color-text-light;
   font-size: 18px;
   font-weight: $font-weight-bold;
   line-height: 1;
@@ -141,14 +141,14 @@ export default {
 .account-line1 {
   font-size: 12px;
   font-weight: $font-weight-medium;
-  color: #11151B;
+  color: $color-text-dark;
   line-height: 1.2;
 }
 
 .account-line2 {
   font-size: 12px;
   font-weight: $font-weight-normal;
-  color: #86898B;
+  color: $color-text-tertiary;
   line-height: 1.2;
 }
 
@@ -176,7 +176,7 @@ export default {
 
 .mobile-billing {
   padding: $spacing-md $spacing-md $spacing-xl;
-  color: #fff;
+  color: $color-text-light;
 }
 
 .mobile-billing-header {
@@ -189,7 +189,7 @@ export default {
 .mobile-billing-title {
   font-size: 16px;
   font-weight: $font-weight-medium;
-  color: #fff;
+  color: $color-text-light;
   margin: 0;
 }
 
@@ -217,7 +217,7 @@ export default {
 .mobile-amount {
   font-size: 40px;
   font-weight: $font-weight-bold;
-  color: #fff;
+  color: $color-text-light;
   line-height: 1.2;
 }
 
@@ -225,7 +225,7 @@ export default {
   display: inline-flex;
   align-items: center;
   gap: $spacing-xs;
-  color: #fff;
+  color: $color-text-light;
   font-size: 14px;
   text-decoration: none;
   opacity: 0.9;

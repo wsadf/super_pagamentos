@@ -51,7 +51,7 @@ export default {
   width: 57px;
   height: 57px;
   border-radius: $border-radius-full;
-  background-color: #E6E3DC;
+  background-color: $color-background-beige;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +105,7 @@ export default {
   padding: $spacing-md $spacing-lg;
   width: 224px;
   height: 46px;
-  background-color: #0641FC;
+  background-color: $color-primary;
   color: $color-text-light;
   border: none;
   border-radius: 250px;

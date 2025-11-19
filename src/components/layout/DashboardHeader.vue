@@ -154,12 +154,12 @@ export default {
 }
 
 .user-name-line1 {
-  color: #11151B;
+  color: $color-text-dark;
   font-weight: $font-weight-medium;
 }
 
 .user-name-line2 {
-  color: #86898B;
+  color: $color-text-tertiary;
   font-weight: $font-weight-normal;
 }
 

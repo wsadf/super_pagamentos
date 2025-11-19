@@ -97,7 +97,7 @@ export default {
       const maxValue = 200000
       
       // Grid
-      ctx.strokeStyle = '#e5e7eb'
+      ctx.strokeStyle = '#e5e7eb' // Usar variável em canvas requer conversão
       ctx.lineWidth = 1
       
       // Linhas verticais (uma para cada dia)
@@ -227,14 +227,14 @@ export default {
 .currency {
   font-size: 16px;
   font-weight: $font-weight-bold;
-  color: #86898B;
+  color: $color-text-tertiary;
   line-height: 1;
 }
 
 .amount {
   font-size: 40px;
   font-weight: $font-weight-bold;
-  color: #0641FC;
+  color: $color-primary;
   line-height: 1.2;
   
   @include mobile {
@@ -253,7 +253,7 @@ export default {
   display: flex;
   align-items: center;
   gap: $spacing-xs;
-  color: #10b981;
+  color: $color-success;
 }
 
 .growth-arrow {
@@ -263,13 +263,13 @@ export default {
 .growth-percent {
   font-size: 12px;
   font-weight: $font-weight-semibold;
-  color: #10b981;
+  color: $color-success;
 }
 
 .growth-text {
   font-size: 12px;
   font-weight: $font-weight-normal;
-  color: #86898B;
+  color: $color-text-tertiary;
 }
 
 .chart-container {
@@ -303,7 +303,7 @@ export default {
   gap: $spacing-md;
   align-items: flex-start;
   padding: $spacing-md;
-  border: 1px solid #EEE;
+  border: 1px solid $color-border-lighter;
   border-radius: 12px;
 }
 

@@ -68,8 +68,8 @@ export default {
     justify-content: space-between;
     gap: $spacing-sm;
     padding: 14px $spacing-lg;
-    background: linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 100%);
-    color: #fff;
+    background: $gradient-primary;
+    color: $color-text-light;
     border: none;
     border-radius: 250px;
     font-weight: $font-weight-medium;
@@ -97,7 +97,7 @@ export default {
 .btn-icon-wrapper {
   width: 18px;
   height: 18px;
-  background-color: #fff;
+  background-color: $color-background;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@ export default {
   font-size: 14px;
   font-weight: $font-weight-bold;
   line-height: 1;
-  color: #000;
+  color: $color-text-primary;
   margin: 0;
   padding: 0;
 }

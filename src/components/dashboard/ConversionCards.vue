@@ -108,7 +108,7 @@ export default {
   align-items: center;
   gap: $spacing-lg;
   border-radius: 12px;
-  border: 1px solid #eee;
+  border: 1px solid $color-border-lighter;
   padding: $spacing-lg;
   
   @include mobile {

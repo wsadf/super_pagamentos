@@ -51,7 +51,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
+  background-color: $color-background;
   border-top: 1px solid $color-border-light;
   display: none;
   justify-content: space-around;
@@ -82,11 +82,11 @@ export default {
   max-width: 80px;
   
   &.active {
-    color: #0641FC;
+    color: $color-primary;
   }
   
   &:not(.nav-item-center):hover {
-    color: #0641FC;
+    color: $color-primary;
   }
 }
 
@@ -114,7 +114,7 @@ export default {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: #0641FC;
+  background-color: $color-primary;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,7 +124,7 @@ export default {
 }
 
 .nav-center-plus {
-  color: #fff;
+  color: $color-text-light;
   font-size: 28px;
   font-weight: $font-weight-bold;
   line-height: 1;

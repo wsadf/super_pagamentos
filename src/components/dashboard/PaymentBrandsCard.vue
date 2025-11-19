@@ -109,7 +109,7 @@ export default {
   width: 100%;
   max-width: 8px;
   height: 120px;
-  background-color: #e5e7eb;
+  background-color: $color-border-chart;
   border-radius: $border-radius-md;
   overflow: hidden;
   position: relative;

@@ -71,7 +71,7 @@ export default {
       const maxValue = 200000
       
       // Grid
-      ctx.strokeStyle = '#e5e7eb'
+      ctx.strokeStyle = '#e5e7eb' // Canvas requer hex
       ctx.lineWidth = 1
       
       // Linhas horizontais
@@ -178,7 +178,7 @@ export default {
 .growth-percent {
   font-size: 14px;
   font-weight: $font-weight-semibold;
-  color: #10b981;
+  color: $color-success;
 }
 
 .stats-chart-container {
@@ -219,11 +219,11 @@ export default {
   margin-top: 6px;
   
   &.dot-blue {
-    background-color: #0641FC;
+    background-color: $color-primary;
   }
   
   &.dot-purple {
-    background-color: #8b5cf6;
+    background-color: $color-secondary;
   }
 }
 
