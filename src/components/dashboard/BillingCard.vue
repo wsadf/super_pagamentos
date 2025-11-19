@@ -177,6 +177,10 @@ export default {
   margin-bottom: $spacing-xl;
   box-shadow: $shadow-sm;
   width: 100%;
+  
+  @include mobile {
+    display: none;
+  }
 }
 
 .card-header {

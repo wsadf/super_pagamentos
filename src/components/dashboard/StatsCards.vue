@@ -69,7 +69,10 @@ export default {
   padding-right: 16px;
   
   @include mobile {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-md;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -82,6 +85,13 @@ export default {
   box-shadow: $shadow-sm;
   box-sizing: border-box;
   position: relative;
+  
+  @include mobile {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    padding: $spacing-md;
+  }
 }
 
 .percentage-icon {

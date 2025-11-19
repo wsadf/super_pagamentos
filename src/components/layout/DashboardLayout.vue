@@ -1,5 +1,6 @@
 <template>
   <div class="dashboard-layout">
+    <MobileHeader />
     <Sidebar />
     <div class="main-wrapper">
       <DashboardHeader />
@@ -7,18 +8,23 @@
         <slot></slot>
       </main>
     </div>
+    <BottomNavigation />
   </div>
 </template>
 
 <script>
 import Sidebar from './Sidebar.vue'
 import DashboardHeader from './DashboardHeader.vue'
+import MobileHeader from './MobileHeader.vue'
+import BottomNavigation from './BottomNavigation.vue'
 
 export default {
   name: 'DashboardLayout',
   components: {
     Sidebar,
-    DashboardHeader
+    DashboardHeader,
+    MobileHeader,
+    BottomNavigation
   }
 }
 </script>
@@ -40,7 +46,7 @@ export default {
   
   @include mobile {
     margin-left: 0;
-    margin-top: 77px;
+    margin-top: 0;
   }
 }
 
@@ -51,6 +57,9 @@ export default {
   
   @include mobile {
     padding: $spacing-md;
+    padding-top: $spacing-md;
+    margin-top: 200px; // Altura do mobile header
+    padding-bottom: 90px; // Espaço para bottom nav
   }
 }
 </style>

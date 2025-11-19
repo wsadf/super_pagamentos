@@ -50,7 +50,7 @@ export default {
   z-index: 99;
   
   @include mobile {
-    padding: 0 $spacing-md;
+    display: none;
   }
 }
 

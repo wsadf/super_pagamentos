@@ -61,8 +61,7 @@ export default {
   align-items: center;
   
   @include mobile {
-    flex-direction: column;
-    align-items: stretch;
+    display: none;
   }
 }
 

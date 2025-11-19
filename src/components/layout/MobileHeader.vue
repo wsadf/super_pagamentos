@@ -4,15 +4,24 @@
     <div class="status-bar">
       <span class="status-time">19:02</span>
       <div class="status-icons">
-        <span class="status-icon">📶</span>
-        <span class="status-icon">📶</span>
-        <span class="status-icon">🔋</span>
+        <svg class="status-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 1.54.36 2.98.97 4.29L0 16l3.71-.97C5.02 15.64 6.46 16 8 16c4.42 0 8-3.58 8-8s-3.58-8-8-8zm0 14c-1.33 0-2.57-.36-3.64-1L2 13l1-2.36C2.36 9.57 2 8.33 2 7c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6z"/>
+        </svg>
+        <svg class="status-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M13.5 0h-11C1.12 0 0 1.12 0 2.5v11C0 14.88 1.12 16 2.5 16h11c1.38 0 2.5-1.12 2.5-2.5v-11C16 1.12 14.88 0 13.5 0zM15 13.5c0 .83-.67 1.5-1.5 1.5h-11C1.67 15 1 14.33 1 13.5v-11C1 1.67 1.67 1 2.5 1h11c.83 0 1.5.67 1.5 1.5v11z"/>
+        </svg>
+        <svg class="status-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M2 4h12v10H2V4zm1 1v8h10V5H3z"/>
+          <path d="M4 2h8v2H4V2z"/>
+        </svg>
       </div>
     </div>
     
     <!-- Account Selector -->
     <div class="account-selector">
-      <img src="@/assets/images/logo.png" alt="Logo" class="account-logo" />
+      <div class="account-logo-circle">
+        <span class="account-logo-text">S</span>
+      </div>
       <div class="account-info">
         <span class="account-line1">Empresarial</span>
         <span class="account-line2">Astra Pagamentos</span>
@@ -51,9 +60,13 @@ export default {
 
 <style lang="scss" scoped>
 .mobile-header {
-  background: linear-gradient(180deg, #0641FC 0%, #0641FC 100%);
+  background: #0641FC;
   padding: 0;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: none;
   
   @include mobile {
@@ -82,8 +95,10 @@ export default {
 }
 
 .status-icon {
-  font-size: 12px;
+  width: 16px;
+  height: 16px;
   opacity: 0.9;
+  color: #fff;
 }
 
 .account-selector {
@@ -98,10 +113,22 @@ export default {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.account-logo {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+.account-logo-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #0641FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.account-logo-text {
+  color: #fff;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  line-height: 1;
 }
 
 .account-info {
@@ -176,19 +203,19 @@ export default {
 .mobile-billing-amount {
   display: flex;
   align-items: baseline;
-  gap: $spacing-xs;
+  gap: 4px;
   margin-bottom: $spacing-md;
 }
 
 .mobile-currency {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: $font-weight-bold;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1;
 }
 
 .mobile-amount {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: $font-weight-bold;
   color: #fff;
   line-height: 1.2;

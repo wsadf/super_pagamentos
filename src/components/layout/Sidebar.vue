@@ -112,12 +112,7 @@ export default {
 
   
   @include mobile {
-    transform: translateX(-100%);
-    transition: transform $transition-base;
-    
-    &.open {
-      transform: translateX(0);
-    }
+    display: none;
   }
 }
 
