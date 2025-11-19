@@ -1,0 +1,138 @@
+// ============================================
+// ESTILOS GLOBAIS
+// ============================================
+
+@import './variables.scss';
+@import './utilities.scss';
+
+// Reset básico
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  
+  // Ajuste de fonte para mobile
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: 1.6;
+  color: $color-text-primary;
+  background-color: $color-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Tipografia
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  margin-bottom: $spacing-md;
+  color: $color-text-primary;
+}
+
+h1 { font-size: $font-size-4xl; }
+h2 { font-size: $font-size-3xl; }
+h3 { font-size: $font-size-2xl; }
+h4 { font-size: $font-size-xl; }
+h5 { font-size: $font-size-lg; }
+h6 { font-size: $font-size-base; }
+
+p {
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $color-primary-dark;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Container responsivo
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  
+  @include mobile {
+    padding: 0 $spacing-sm;
+  }
+  
+  @include tablet {
+    max-width: 720px;
+  }
+  
+  @include desktop {
+    max-width: 1200px;
+    padding: 0 $spacing-lg;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 $spacing-md;
+  
+  @include mobile {
+    padding: 0 $spacing-sm;
+  }
+}
+
+// Grid system básico
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -$spacing-sm;
+  
+  @include mobile {
+    margin: 0 -$spacing-xs;
+  }
+}
+
+.col {
+  flex: 1;
+  padding: 0 $spacing-sm;
+  
+  @include mobile {
+    padding: 0 $spacing-xs;
+  }
+}
+
+// Utilitários de espaçamento
+@for $i from 1 through 5 {
+  .mt-#{$i} { margin-top: $spacing-md * $i; }
+  .mb-#{$i} { margin-bottom: $spacing-md * $i; }
+  .ml-#{$i} { margin-left: $spacing-md * $i; }
+  .mr-#{$i} { margin-right: $spacing-md * $i; }
+  .mx-#{$i} { margin-left: $spacing-md * $i; margin-right: $spacing-md * $i; }
+  .my-#{$i} { margin-top: $spacing-md * $i; margin-bottom: $spacing-md * $i; }
+  
+  .pt-#{$i} { padding-top: $spacing-md * $i; }
+  .pb-#{$i} { padding-bottom: $spacing-md * $i; }
+  .pl-#{$i} { padding-left: $spacing-md * $i; }
+  .pr-#{$i} { padding-right: $spacing-md * $i; }
+  .px-#{$i} { padding-left: $spacing-md * $i; padding-right: $spacing-md * $i; }
+  .py-#{$i} { padding-top: $spacing-md * $i; padding-bottom: $spacing-md * $i; }
+}
+
